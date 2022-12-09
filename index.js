@@ -70,8 +70,8 @@ const handleChange = (event) => {
           label="Query Type"
           onChange={handleChange}
         >
-          <MenuItem value={10}>MongoDB</MenuItem>
-          <MenuItem value={20}>SQL</MenuItem>
+          <MenuItem value={10}>hello</MenuItem>
+          <MenuItem value={20}>world</MenuItem>
         </Select>
       </FormControl>
     </Box> */}
