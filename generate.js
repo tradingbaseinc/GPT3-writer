@@ -44,7 +44,7 @@ const generateAction = async (req, res) => {
   const secondPromptOutput = secondPromptCompletion.data.choices.pop();
   console.log(`${secondPromptOutput.text}`, "this is second Prompt Output");
 
-  res.status(200).json({ output: {contents: basePromptOutput, blog: secondPromptOutput }});
+  res.status(200).JSON.stringify({ output: {contents: basePromptOutput, blog: secondPromptOutput }});
 };
 
 export default generateAction;
