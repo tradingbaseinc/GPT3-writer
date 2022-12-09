@@ -20,7 +20,7 @@ const generateAction = async (req, res) => {
   });
   
   const basePromptOutput = baseCompletion.data.choices.pop();
-  console.log(`${basePromptOutput}`, "this is base Prompt Output");
+ // console.log(`${basePromptOutput}`, "this is base Prompt Output");
 
   //Prompt #2
 
@@ -29,7 +29,7 @@ const generateAction = async (req, res) => {
   Take the title of contents from ${basePromptOutput} and generate a detailed thread explaining with examples. Make it feel like a story. Don't just list the points. Go deep into each line. Explain why with examples.   
   Title: "The title as follows:"
    
-  blog Summary:
+  Query Summary:
   `
 
   //I call the openAI API second time with Prompt #2
@@ -44,8 +44,7 @@ const generateAction = async (req, res) => {
   const secondPromptOutput = secondPromptCompletion.data.choices.pop();
   console.log(`${secondPromptOutput.text}`, "this is second Prompt Output");
 
-  res.status(200).json({ output: basePromptOutput });
-  res.status(200).json({ output: secondPromptOutput });
+  res.status(200).json({ output: {contents: basePromptOutput, blog: secondPromptOutput }});
 };
 
 export default generateAction;
