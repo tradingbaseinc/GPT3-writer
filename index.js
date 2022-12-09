@@ -49,7 +49,7 @@ const handleChange = (event) => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>AI Query Builder</h1>
+            <h1>Ask me anything</h1>
           </div>
           <div className="header-subtitle">
             <h2>Get the answers Instantly with AI</h2>
