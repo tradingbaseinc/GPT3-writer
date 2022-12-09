@@ -29,7 +29,7 @@ const generateAction = async (req, res) => {
   Take the title of contents from ${basePromptOutput} and generate a detailed thread explaining with examples. Make it feel like a story. Don't just list the points. Go deep into each line. Explain why with examples.   
   Title: "The title as follows:"
    
-  Query Summary:
+  blog Summary:
   `
 
   //I call the openAI API second time with Prompt #2
